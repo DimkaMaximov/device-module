@@ -1,48 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>dependency-management-bom-device</artifactId>
         <groupId>liga.medical</groupId>
+        <artifactId>dependency-management-bom</artifactId>
         <version>0.0.1</version>
         <relativePath>../dependency-management-bom/pom.xml</relativePath>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>device-core</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>core</artifactId>
+
+    <properties>
+        <java.version>1.11</java.version>
+    </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>liga.medical</groupId>
-            <artifactId>common-services</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>liga.medical</groupId>
-            <artifactId>device-core-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>liga.medical</groupId>
-            <artifactId>device-utils</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>liga.medical</groupId>
-            <artifactId>device-dto</artifactId>
-        </dependency>
-
 
         <dependency>
-            <groupId>org.springframework.amqp</groupId>
-            <artifactId>spring-amqp</artifactId>
-            <version>2.3.7</version>
+            <groupId>liga.medical</groupId>
+            <artifactId>common-dto</artifactId>
+            <version>0.0.1</version>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.amqp</groupId>
-            <artifactId>spring-rabbit</artifactId>
-            <version>2.3.7</version>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.0</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
